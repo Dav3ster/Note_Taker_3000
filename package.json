@@ -8,17 +8,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Dav3ster/Note-Taker_3000.git"
+    "url": "git+https://github.com/Dav3ster/Note_Taker_3000.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Dav3ster/Note-Taker_3000/issues"
+    "url": "https://github.com/Dav3ster/Note_Taker_3000/issues"
   },
-  "homepage": "https://github.com/Dav3ster/Note-Taker_3000#readme",
+  "homepage": "https://github.com/Dav3ster/Note_Taker_3000#readme",
   "dependencies": {
     "express": "^4.16.4",
+    "heroku": "^7.67.1",
     "uuid": "^9.0.0",
     "uuid.v4": "^1.0.0"
   }
