@@ -1,29 +1,14 @@
+const path = require('path');
 const router = require('express').Router();
-const store = require('../store');
 
-//GET "/api/notes" responds with all notes from the database
+//"/notes" responds with the notes.html file
 router.get('/notes', (req, res) => {
-    store
-        .getNotes()
-        .then((notes) => {
-            return res.json(notes);
-        })
-        .catch((err) => res.status(500).json(err));
+    res.sendFile(path.join(__dirname, '../public/notes.html'));
 });
 
-router.post('/notes', (req, res) => {
-    store
-        .addNote(req.body)
-        .then((note) => res.json(note))
-        .catch((err) => res.status(500).json(err));
-});
-
-//DELETE "/api/notes" deletes the note with an id equal to req.params.id
-router.delete('/notes/:id', (req, res) => {
-    store
-        .removeNote(req.params.id)
-        .then(() => res.json({ ok: true }))
-        .catch((err) => res.status(500).json(err));
+//All other routes respond with the index.html file
+router.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/index.html'));
 });
 
 module.exports = router;
