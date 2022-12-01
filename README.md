@@ -6,7 +6,7 @@ The purpose of this challenge was to get more famaliar with using express, routi
 
 ## Image of webpage
  
-![Image](./assets/Images/readmeimage.png)
+![Image](./public/assets/Images/readmeimage.png)
 
 ## App link 
 
